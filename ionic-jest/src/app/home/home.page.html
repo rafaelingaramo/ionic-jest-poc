@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <form onsubmit="">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label id="home-page-first-name" position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" [(ngModel)]="personnelData.firstName" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label id="home-page-last-name" position="stacked" >Last Name <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" [(ngModel)]="personnelData.lastName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label id="home-page-address" position="stacked" >Address</ion-label>
+        <ion-input placeholder="Address Line 1"  [(ngModel)]="personnelData.addressLine1"></ion-input>
+        <ion-input placeholder="Address Line 2"  [(ngModel)]="personnelData.addressLine2"></ion-input>
+        <ion-input placeholder="City"  [(ngModel)]="personnelData.city"></ion-input>
+        <ion-input placeholder="State"  [(ngModel)]="personnelData.state"></ion-input>
+        <ion-input placeholder="Zip Code"  [(ngModel)]="personnelData.zipCode"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label id="home-page-notes" position="stacked">Notes</ion-label>
+        <ion-textarea  [(ngModel)]="personnelData.notes"></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button id="home-page-button-create-account" (click) ="createAccountClick()" expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
+    </div>
+  </form>
+</ion-content>
